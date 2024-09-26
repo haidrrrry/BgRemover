@@ -66,7 +66,7 @@ fun BackgroundRemoverApp(context: Context) {
                     .weight(1f)
             )
         } ?: run {
-            Text("No original image to display")
+            Text("No original image to Display")
         }
 
         Spacer(modifier = Modifier.height(16.dp))

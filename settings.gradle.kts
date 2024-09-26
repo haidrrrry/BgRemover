@@ -7,6 +7,8 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+
+        maven { url = uri("https://jitpack.io") }
         mavenCentral()
         gradlePluginPortal()
     }
@@ -16,9 +18,18 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
 rootProject.name = "Bg Remover"
 include(":app")
 include(":bgRemover")
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}

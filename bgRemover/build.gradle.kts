@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -30,8 +31,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
 
+}
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
 dependencies {
 
     implementation(libs.androidx.core.ktx)
