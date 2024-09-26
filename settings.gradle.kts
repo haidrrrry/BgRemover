@@ -25,7 +25,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Bg Remover"
 include(":app")
-include(":bgRemover")
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
